@@ -1,0 +1,151 @@
+/* Reset & body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1f3b4d 0%, #3a6073 100%);
+  font-size: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle shapes */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+}
+body::before {
+  width: 600px;
+  height: 600px;
+  top: -150px;
+  left: -150px;
+}
+body::after {
+  width: 500px;
+  height: 500px;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Form container */
+.form-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+.form-container h2 {
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+  position: relative;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+}
+.input-group input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.input-group input:focus {
+  border-color: #3a6073;
+  box-shadow: 0 0 8px rgba(58, 96, 115, 0.5);
+}
+
+/* Password toggle icon */
+.password-toggle {
+  position: absolute;
+  top: 69%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 20px;
+}
+.forgot-password a {
+  font-size: 14px;
+  color: #3a6073;
+  text-decoration: none;
+  font-weight: 500;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3a6073;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #1f3b4d;
+}
+
+/* Signup link */
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.signup-link a {
+  color: #3a6073;
+  text-decoration: none;
+  font-weight: 500;
+}
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 30px 20px;
+  }
+  .input-group input,
+  button {
+    padding: 10px;
+  }
+}
